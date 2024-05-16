@@ -1,0 +1,68 @@
+.trip {
+    display: block;
+    position: relative;
+
+    &__link {
+        position: absolute;
+        top: -6px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        z-index: 1;
+        background: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7") 0 0 repeat;
+
+        &:hover,
+        &:focus {
+            & + .trip__box {
+                transform: translateY(-6px);
+                box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.45);
+            }
+        }
+    }
+
+    &__box {
+        display: block;
+        position: relative;
+        z-index: 0;
+        background: #202020;
+        min-height: 100%;
+        border-radius: 6px;
+        overflow: hidden;
+        transition: transform 200ms ease-out,
+                    box-shadow 200ms ease-out;
+    }
+
+    &__title {
+        background: #303030;
+        color: #fff;
+        padding: 0.4em 1em;
+    }
+
+    &__info {
+        padding: 0.4em 1em;
+    }
+
+    &__term,
+    &__data {
+        color: #fff;
+        line-height: 1.5;
+    }
+
+    &__term {
+        font-size: 0.8em;
+    }
+
+    &__data + .trip__term {
+        margin-top: 0.4em;
+    }
+
+    &__description {
+        padding: 0.4em 1em;
+        border-top: 1px solid #303030;
+        text-align: left;
+        color: #fff;
+        line-height: 1.5;
+        font-size: 0.8em;
+    }
+}

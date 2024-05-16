@@ -1,0 +1,30 @@
+html, html * {
+    box-sizing: border-box;
+}
+
+body {
+    background: yellow;
+
+    * {
+        color: blue;
+    }
+
+    p { 
+        text-align: center;
+    }
+}
+
+@import "reset";
+@import "icons";
+@import "helpers";
+
+@import "components/quicksearch";
+@import "components/result";
+@import "components/recipes";
+@import "components/recipe";
+@import "components/trips";
+@import "components/trip";
+@import "components/form";
+@import "components/field";
+
+@import "fonts";

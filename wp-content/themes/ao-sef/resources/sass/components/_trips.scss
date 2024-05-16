@@ -1,0 +1,35 @@
+.trips {
+    &__container {
+        width: 90%;
+        margin: 2em auto;
+        display: grid;
+        grid-template-columns: 23.5% 23.5% 23.5% 23.5%;
+        grid-template-rows: auto;
+        column-gap: 2%;
+        row-gap: 1em;
+    }
+
+    @media screen and (max-width: 900px) {
+        &__container {
+            grid-template-columns: 32% 32% 32%;
+            column-gap: 2%;
+        }
+    }
+
+    @media screen and (max-width: 670px) {
+        &__container {
+            grid-template-columns: 49% 49%;
+            column-gap: 2%;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        &__container {
+            display: block;
+
+            .trip + .trip {
+                margin-top: 1em;
+            }
+        }
+    }
+}

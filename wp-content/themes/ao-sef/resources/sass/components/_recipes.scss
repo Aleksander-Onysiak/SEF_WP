@@ -1,0 +1,19 @@
+.recipes {
+    &__container {
+        width: 90%;
+        margin: 2em auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        .recipe {
+            width: 32%;
+            margin-left: 2%;
+
+            &:nth-child(3n + 1) {
+                margin-left: 0;
+            }
+        }
+    }
+}

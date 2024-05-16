@@ -1,0 +1,26 @@
+.field {
+    display: block;
+    position: relative;
+
+    &__label {
+        display: block;
+        padding-bottom: 0.5em;
+    }
+
+    &__input,
+    &__textarea {
+        display: block;
+        width: 100%;
+        font: inherit;
+        padding: 0.25em 0.5em;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    &__error {
+        display: block;
+        text-align: left;
+        margin-top: 0.5em;
+        color: red;
+    }
+}

@@ -1,0 +1,69 @@
+.recipe {
+    display: block;
+    position: relative;
+
+    &__link {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7") 0 0 repeat;
+
+        &:hover,
+        &:focus {
+            & + .recipe__box {
+                border: 1px solid red;
+
+                .recipe__title {
+                    color: red;
+                }
+            }
+        }
+    }
+
+    &__box {
+        display: block;
+        position: relative;
+        z-index: 0;
+        border-radius: 6px;
+        background: #fff;
+        border: 1px solid #f0f0f0;
+        padding: 1em 2em;
+        transition: border 200ms ease-out;
+    }
+
+    &__title {
+        font-weight: bold;
+        color: black;
+        margin-bottom: 0.5em;
+        transition: color 200ms ease-out;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__term,
+    &__data {
+        display: block;
+        line-height: 1.5;
+        color: grey;
+    }
+
+    &__term {
+        width: 40%;
+    }
+
+    &__data {
+        width: 60%;
+    }
+
+
+
+}
